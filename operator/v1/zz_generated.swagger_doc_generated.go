@@ -67,6 +67,19 @@ func (GenerationStatus) SwaggerDoc() map[string]string {
 	return map_GenerationStatus
 }
 
+var map_RelatedResourceMeta = map[string]string{
+	"":          "RelatedResourceMeta represents the resource that is managed by an operator",
+	"group":     "group is the group of the resource that you're tracking",
+	"version":   "version is the version of the thing you're tracking",
+	"resource":  "resource is the resource type of the resource that you're tracking",
+	"namespace": "namespace is where the thing you're tracking is",
+	"name":      "name is the name of the resource that you're tracking",
+}
+
+func (RelatedResourceMeta) SwaggerDoc() map[string]string {
+	return map_RelatedResourceMeta
+}
+
 var map_Klusterlet = map[string]string{
 	"":       "Klusterlet represents controllers on the managed cluster. When configured, the Klusterlet requires a secret named of bootstrap-hub-kubeconfig in the same namespace to allow API requests to the hub for the registration protocol.",
 	"spec":   "Spec represents the desired deployment configuration of Klusterlet agent.",
@@ -110,19 +123,6 @@ var map_KlusterletStatus = map[string]string{
 
 func (KlusterletStatus) SwaggerDoc() map[string]string {
 	return map_KlusterletStatus
-}
-
-var map_RelatedResourceMeta = map[string]string{
-	"":          "RelatedResourceMeta represents the resource that is managed by an operator",
-	"group":     "group is the group of the resource that you're tracking",
-	"version":   "version is the version of the thing you're tracking",
-	"resource":  "resource is the resource type of the resource that you're tracking",
-	"namespace": "namespace is where the thing you're tracking is",
-	"name":      "name is the name of the resource that you're tracking",
-}
-
-func (RelatedResourceMeta) SwaggerDoc() map[string]string {
-	return map_RelatedResourceMeta
 }
 
 var map_ServerURL = map[string]string{
